@@ -1,3 +1,14 @@
+/* This is a test  for demonstrating the usage of internal Timer Counters and Interrupts
+ * on the MSP430. The code uses the onboard LED's  to display the counter outputs..
+ * Board used is the MSP430 Launchpad, which has an onboard MSP430G2553 microcontroller.
+ * Written in CCS Ver 10.2
+ *
+ * Written by Ashish Wani
+ * Iotopia.in
+ * March 2021
+ */
+
+
 #include "msp430g2553.h"
 #include <msp430.h>
 
@@ -23,8 +34,8 @@ int main(void)
 	TACCTL0 |= CCIE; // Enable interrupt
     TACCR0 = REDLED_VALUE ; // Stop Timer
     //Configuring Timer A, Compare 2
-    //TACCTL1 |= CCIE;// Enable interrupt
-    //TACCR1 = GREENLED_VALUE;
+    TACCTL1 |= CCIE;// Enable interrupt
+    TACCR1 = GREENLED_VALUE;
 
 	TACTL = TASSEL_1+ MC_1+ID_3;        // Configuring Timer for using ACLK, Prescaler is 8 and Up Mode of counting
 
@@ -34,10 +45,11 @@ int main(void)
 	TBCTL = TBSSEL_1+ MC_1+ID_3;        // Configuring Timer for using ACLK, Prescaler is 8 and Up Mode of counting
 
 */
+    _BIS_SR(GIE);
 	while(1){
-	    _BIS_SR(GIE);
 
 	}
+
 }
 
 //Timer A ISR
@@ -49,11 +61,10 @@ __interrupt void Timer_A_CCR0_ISR(void)
 
 }
 
-/*//Timer A ISR
-#pragma vector = TIMER0_B0_VECTOR
-__interrupt void Timer_B_CCR0_ISR(void)
+//Timer A ISR
+#pragma vector = TIMER0_A1_VECTOR
+__interrupt void Timer_A_CCR1_ISR(void)
 {
    P1OUT^= GREENLED;
-   TBCTL = TBCLR;
 }
-*/
+

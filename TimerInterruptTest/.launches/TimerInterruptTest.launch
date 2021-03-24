@@ -4,7 +4,7 @@
 <stringAttribute key="com.ti.ccstudio.debug.debugModel.ATTR_PROGRAM.MSP430G2553.ccxml.TI MSP430 USB1/MSP430" value="${build_artifact:TimerInterruptTest}"/>
 <stringAttribute key="com.ti.ccstudio.debug.debugModel.ATTR_PROJECT.MSP430G2553.ccxml.TI MSP430 USB1/MSP430" value="TimerInterruptTest"/>
 <stringAttribute key="com.ti.ccstudio.debug.debugModel.ATTR_TARGET_CONFIG" value="${target_config_active_default:TimerInterruptTest}"/>
-<stringAttribute key="com.ti.ccstudio.debug.debugModel.MRU_PROGRAM.MSP430G2553.ccxml.TI MSP430 USB1/MSP430" value="C:\Users\Ashish Wani\workspace_v10\TimerInterruptTest\Debug\TimerInterruptTest.out"/>
+<stringAttribute key="com.ti.ccstudio.debug.debugModel.MRU_PROGRAM.MSP430G2553.ccxml.TI MSP430 USB1/MSP430" value="C:\Users\Ashish Wani\git\repository\TimerInterruptTest\Debug\TimerInterruptTest.out"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
 <listEntry value="/TimerInterruptTest"/>
 </listAttribute>
